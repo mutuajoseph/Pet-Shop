@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Navbar, NavDropdown, Nav } from 'react-bootstrap';
+import {Navbar, Nav } from 'react-bootstrap';
 import {RiShoppingCartLine, RiUser3Line, RiSearch2Line} from 'react-icons/all'
 import {Link} from 'react-router-dom'
 
@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div>
       <Navbar bg='light' className="px-5">
-        <Container fluid>
+        <div className="container">
         <Link to="/"><Navbar.Brand>PetShop</Navbar.Brand></Link>
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
@@ -34,7 +34,7 @@ const Header = () => {
             </NavDropdown> */}
           </Nav>
         </Navbar.Collapse>
-        </Container>
+        </div>
       </Navbar>
     </div>
   );

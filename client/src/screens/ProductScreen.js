@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import { Row, Col, Container, Image } from 'react-bootstrap';
-import { RiShoppingCartLine, FcLike } from 'react-icons/all';
+import { Row, Col, Image } from 'react-bootstrap';
+import { RiShoppingCartLine } from 'react-icons/all';
 
 // import image
 import SingleProduct from '../assets/single_product.jpg';
 import Features from '../components/Features';
+import Rating from '../components/Rating';
 
 const ProductScreen = () => {
   const [toggle, setToggle] = useState('description');
@@ -14,9 +15,9 @@ const ProductScreen = () => {
   return (
     <div>
       <Header />
-      <Container fluid className='px-5'>
+      <div className='container px-5'>
         <main>
-          <Row>
+          <Row className="mt-4">
             <Col>
               <Image
                 src={SingleProduct}
@@ -31,7 +32,9 @@ const ProductScreen = () => {
                   <div className='single-product-col'>
                     <h5>$15.00</h5>
                   </div>
-                  <div className='single-product-col'>rewiews</div>
+                  <div className='single-product-col'>
+                    <Rating />
+                  </div>
                 </div>
               </div>
               <p className='text-justify pr-5 mt-3'>
@@ -119,7 +122,7 @@ const ProductScreen = () => {
             <Features />
           </div>
         </main>
-      </Container>
+      </div>
       <Footer />
     </div>
   );

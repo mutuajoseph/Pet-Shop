@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+// import { Container } from 'react-bootstrap';
 
 // import components
 import Header from '../components/Header';
@@ -7,8 +7,6 @@ import Footer from '../components/Footer';
 
 // import images
 import product_1 from '../assets/chock_chain.jpeg';
-import product_2 from '../assets/colar.jpeg';
-import product_4 from '../assets/harness.jpeg';
 import { Link } from 'react-router-dom';
 
 const ProductsScreen = () => {
@@ -16,7 +14,7 @@ const ProductsScreen = () => {
     <div>
       <Header />
       <main>
-        <Container fluid className='px-5'>
+        <div className='container'>
           {/* heading */}
           {/* TODO: BREADCRUMS */}
           <p className='text-center mt-2'>breadcrumbs</p>
@@ -27,7 +25,77 @@ const ProductsScreen = () => {
 
           {/* product display section */}
           <div className='products-row'>
-            <div className='products-sidebar'> sidebar</div>
+            <div className='products-sidebar mt-2 mb-2'>
+              {/* category list with category items */}
+              <h6 className="mb-4">Categories</h6>
+              <ul className='list-group'>
+                <li
+                  className='list-group-item d-flex justify-content-between align-items-center'
+                  style={{ width: '200px' }}
+                >
+                  Colars
+                  <span className='badge bg-primary text-light rounded-pill'>
+                    14
+                  </span>
+                </li>
+                <li
+                  className='list-group-item d-flex justify-content-between align-items-center'
+                  style={{ width: '200px' }}
+                >
+                  Bite suites
+                  <span className='badge bg-primary text-light rounded-pill'>
+                    2
+                  </span>
+                </li>
+              </ul>
+              {/* brands */}
+
+              <h6 className="mt-4">Brands</h6>
+              <div class='form-check'>
+                <input
+                  class='form-check-input'
+                  type='checkbox'
+                  value=''
+                  id='flexCheckDefault'
+                />
+                <label class='form-check-label' for='flexCheckDefault'>
+                  Default checkbox
+                </label>
+              </div>
+              <div class='form-check my-2'>
+                <input
+                  class='form-check-input'
+                  type='checkbox'
+                  value=''
+                  id='flexCheckDefault'
+                />
+                <label class='form-check-label' for='flexCheckDefault'>
+                  Default checkbox
+                </label>
+              </div>
+              <div class='form-check my-2'>
+                <input
+                  class='form-check-input'
+                  type='checkbox'
+                  value=''
+                  id='flexCheckDefault'
+                />
+                <label class='form-check-label' for='flexCheckDefault'>
+                  Default checkbox
+                </label>
+              </div>
+              <div class='form-check my-2'>
+                <input
+                  class='form-check-input'
+                  type='checkbox'
+                  value=''
+                  id='flexCheckDefault'
+                />
+                <label class='form-check-label' for='flexCheckDefault'>
+                  Default checkbox
+                </label>
+              </div>
+            </div>
             <div className='products-main'>
               <div className='items-row'>
                 <div className='column mt-2 mb-2'>
@@ -117,7 +185,7 @@ const ProductsScreen = () => {
               </div>
             </div>
           </div>
-        </Container>
+        </div>
       </main>
       <Footer />
     </div>

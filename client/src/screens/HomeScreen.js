@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Image, Button, Card } from 'react-bootstrap';
+import {Row, Col, Image, Button } from 'react-bootstrap';
 import {RiArrowRightSLine, FaShippingFast, GrMoney, IoCall} from 'react-icons/all'
 
 // import images
@@ -16,7 +16,7 @@ const HomeScreen = ({history}) => {
     <>
       <Header />
       <main>
-        <Container fluid className='px-5'>
+        <div className='container'>
           <Row>
             <Col sm={7} className="col-height">
               <h1 className="heading">Everything you need for your pet</h1>
@@ -56,7 +56,7 @@ const HomeScreen = ({history}) => {
           {/* Our Products */}
           <Products />
 
-        </Container>
+        </div>
       </main>
       <Footer />
     </>
