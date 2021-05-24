@@ -6,8 +6,9 @@ from pydantic import BaseModel
 from db.config import Base, engine, get_db
 
 # import models
-from models.product_category import Product_category
+from models.product_category import Product_category, Association
 from models.product import ProductModel
+from models.product_brand import ProductBrand
 
 # create the tables
 Base.metadata.create_all(bind=engine)

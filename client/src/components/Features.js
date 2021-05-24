@@ -29,7 +29,7 @@ const Features = () => {
             <p className='card-text'>
               <Rating />
             </p>
-            <p className='card-text'> $15.00</p>
+            <p className='card-text bold'> $15.00</p>
           </div>
         </Link>
       </div>

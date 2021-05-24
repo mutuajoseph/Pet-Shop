@@ -20,6 +20,8 @@ class ProductModel(Base):
 
     # relationship
     product_category_id = Column(Integer, ForeignKey("product_categories.id"))
+    product_brand_id = Column(Integer, ForeignKey("product_brands.id"))
     product_category = relationship("Product_category", back_populates="products")
+    product_brand = relationship("ProductBrand", back_populates="brands")
 
 
