@@ -12,16 +12,19 @@ class ProductModel(Base):
     product_description = Column(String, nullable=False)
     price = Column(Float, nullable=False)
     rating = Column(Float, nullable=False)
-    image = Column(String, nullable=False)
+    # image = Column(String, nullable=False)
     brand = Column(String, nullable=False)
     num_reviews = Column(Integer, nullable=False)
-    count_in_stock = Column(Integer, nullable=False)
+    # count_in_stock = Column(Integer, nullable=False)
     created_at = Column(DateTime(timezone=True), default=func.now(), nullable=False)
 
     # relationship
     product_category_id = Column(Integer, ForeignKey("product_categories.id"))
     product_brand_id = Column(Integer, ForeignKey("product_brands.id"))
+    
     product_category = relationship("Product_category", back_populates="products")
-    product_brand = relationship("ProductBrand", back_populates="brands")
+    inventories = relationship("ProductInventory", back_populates="product")
+    brand = relationship("ProductBrand", back_populates="products")
+    images = relationship("ProductImage", back_populates="product")
 
 

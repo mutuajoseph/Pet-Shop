@@ -14,5 +14,5 @@ class ProductBrand(Base):
     created_at = Column(DateTime(timezone=True), default=func.now(), nullable=False)
 
     # relationship
-    brands = relationship("ProductBrand", back_populates="product_brand")
+    products = relationship("ProductModel", back_populates="brand")
     categories = relationship("Association", back_populates="brand")
